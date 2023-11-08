@@ -1,5 +1,6 @@
 <script>
     import { browser } from "$app/environment";
+    import { PUBLIC_USERNAME } from "$env/static/public";
 
     /**
      * @type {any[]}
@@ -10,7 +11,7 @@
     async function getRepos() {
         try {
             const response = await fetch(
-                `https://api.github.com/users/gauravhegade/repos`
+                `https://api.github.com/users/${PUBLIC_USERNAME}/repos`
             );
             const data = await response.json();
             // console.log(data); // log data if needed later on
