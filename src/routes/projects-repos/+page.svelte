@@ -1,4 +1,6 @@
 <script>
+  import { browser } from "$app/environment";
+
   /**
    * @type {any[]}
    */
@@ -10,8 +12,8 @@
         `https://api.github.com/users/gauravhegade/repos`
       );
       const data = await response.json();
+      // console.log(data);
       repos = data;
-      console.log(repos);
     } catch (error) {
       console.error(error);
     }
@@ -19,9 +21,14 @@
 </script>
 
 <p>Projects go here</p>
-<button on:click={getRepos}>Show repositories</button>
-<div>
-  {#each repos as repo}
-    <p>{repo.name}</p>
-  {/each}
-</div>
+{#if browser}
+  {#await getRepos()}
+    <p>Loading Data Please Wait...</p>
+  {:then}
+    {#each repos as repo}
+      <p>{repo.name}</p>
+    {/each}
+  {:catch error}
+    <p>{error.message}</p>
+  {/await}
+{/if}
