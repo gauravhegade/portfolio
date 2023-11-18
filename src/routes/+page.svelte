@@ -1,5 +1,9 @@
 <script>
-    let todo = `TODO NEXT: <br> 1. Implement a blog page. <br> 2. Add a visitor count to the website <br> 3. ADD A FEATURE WHERE PEOPLE CAN ADD SOME TOKEN OF APPRECIATION(may change idk what this is lmao) WHEN THEY VISIT THE WEBSITE AS A MARK OF BEING VISITED`;
+    import About from "$lib/pages/About.svelte";
+    import Work from "$lib/pages/Work.svelte";
+    import Projects from "$lib/pages/Projects.svelte";
+
+    let todo = `TODO NEXT: <br> 1. Implement a blog page. <br> 2. Add a visitor count to the website <br>`;
 </script>
 
 <svelte:head>
@@ -13,6 +17,10 @@
 <p id="todo">
     {@html todo.toLowerCase()}
 </p>
+
+<!-- <About />
+<Work />
+<Projects /> -->
 
 <style>
     #todo {
