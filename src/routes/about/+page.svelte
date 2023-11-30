@@ -2,4 +2,4 @@
     import About from "$lib/pages/About.svelte";
 </script>
 
-<About />
+<About title="About Me"/>

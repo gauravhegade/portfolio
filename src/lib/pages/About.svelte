@@ -1,5 +1,10 @@
+<script>
+    // set title value from the page component used in the route
+    export let title;
+</script>
+
 <svelte:head>
-    <title>About Me</title>
+    <title>{title}</title>
 </svelte:head>
 
 <h1>About Gaurav Hegade</h1>
