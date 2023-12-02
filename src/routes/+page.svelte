@@ -1,9 +1,11 @@
 <script>
-    import About from "$lib/pages/About.svelte";
-    import Work from "$lib/pages/Work.svelte";
-    import Projects from "$lib/pages/Projects.svelte";
+    // import About from '$lib/pages/About.svelte';
+    // import Work from '$lib/pages/Work.svelte';
+    // import Projects from '$lib/pages/Projects.svelte';
 
     let todo = `TODO NEXT: <br> 1. Implement a blog page. <br> 2. Add a visitor count to the website <br>`;
+
+    import { route } from '$lib/ROUTES';
 </script>
 
 <svelte:head>
@@ -12,7 +14,7 @@
 
 <h1>Welcome to my portfolio website</h1>
 
-<p>Go to my <a href="/about">about page</a> to learn more about me</p>
+<p>Go to my <a href={route('/about')}>about page</a> to learn more about me</p>
 
 <p id="todo">
     {@html todo.toLowerCase()}

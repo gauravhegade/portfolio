@@ -1,8 +1,8 @@
 <script>
     // import { browser } from "$app/environment";
-    import { PUBLIC_USERNAME } from "$env/static/public";
+    import { PUBLIC_USERNAME } from '$env/static/public';
 
-    let main_url = "https://www.github.com/";
+    let main_url = 'https://www.github.com/';
     let repos = [];
 
     async function getRepos() {
@@ -13,7 +13,7 @@
             const data = await res.json();
             repos = data;
         } catch (error) {
-            console.error(error);
+            console.error(`Cannot fetch repos: ${error}`);
         }
     }
 </script>
@@ -32,7 +32,7 @@
             <a href="{main_url}{repo.full_name}" style="text-decoration: none;"
                 >{repo.name}</a
             >
-            {#if repo.description ?? (repo.description = "Not yet added")}
+            {#if repo.description ?? (repo.description = 'Not yet added')}
                 <br />Description: {repo.description}
             {/if}
         </p>
