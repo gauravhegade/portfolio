@@ -10,7 +10,7 @@
 <h1>About Gaurav Hegade</h1>
 <p>
     Hello, I am a developer from India with a focus on Linux, System
-    Administration, and Cloud Systems Development and Deployment. My journey in
+    Administration, and Cloud Engineering. My journey in
     the world of technology has led me to explore a wide range of technical
     domains, and I'm excited to share a bit about my expertise and interests.
     <!-- Linux has always held a special place in my heart. The open-source nature of
