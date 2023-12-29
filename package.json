@@ -23,6 +23,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"mdsvex": "^0.11.0",
 		"remark-frontmatter": "^5.0.0",
 		"remark-rehype": "^11.0.0"
 	}
