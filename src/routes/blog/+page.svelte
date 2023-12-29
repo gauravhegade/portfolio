@@ -1,5 +1,1 @@
-<script>
-    import Blog from "$lib/pages/Blog.svelte";
-</script>
-
-<Blog />
+<p>This is my blog page</p>

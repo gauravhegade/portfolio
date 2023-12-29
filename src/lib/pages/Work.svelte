@@ -1,6 +1,4 @@
 <script lang="ts">
-    import { deserialize } from "$app/forms";
-
     const months = [
         "January",
         "February",
